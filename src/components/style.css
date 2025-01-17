@@ -1,0 +1,372 @@
+/* Base Styles (Mobile-first) */
+.design-root {
+    font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+    background-color: #ffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease; 
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  .logout-button {
+    background-color: #e53e3e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: auto;
+  }
+  
+  .logout-button:hover {
+    background-color: #c53030;
+    transform: translateY(-2px);
+  }
+  
+
+
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: #111722;
+    padding: 16px 16px 8px;
+    justify-content: space-between;
+  }
+  
+  .icon {
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .title {
+    color: white;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+    flex: 1;
+    padding-right: 48px;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    padding: 16px;
+    animation: fadeIn 1.2s ease; /* Fade-in effect for the profile section */
+  }
+  
+  .profile-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .profile-image img {
+    background-size: cover;
+    background-position: center;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-name {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .profile-balance {
+    color: #93a4c8;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .invite-button {
+    width: 100%;
+    max-width: 480px;
+    background-color: #242f47;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .invite-button:hover {
+    background-color: #3b72e8; 
+    transform: translateY(-3px); 
+  }
+  
+  /* Cashback History */
+  .cashback-history-section {
+    padding: 16px;
+    animation: fadeIn 1.5s ease; /* Fade-in effect for cashback history */
+  }
+  
+  .cashback-history-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #242f47;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cashback-history-item:hover {
+    background-color: #3b72e8; 
+    transform: scale(1.05); 
+  }
+  
+  .cashback-date {
+    color: #93a4c8;
+    font-size: 0.875rem;
+  }
+  
+  .cashback-booking {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .cashback-amount {
+    color: #4caf50;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .section-title {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 16px;
+  }
+  
+  /* Earnings Section */
+  .earning-item, .redeem-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #111722;
+    padding: 8px 16px;
+    min-height: 72px;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .earning-item:hover, .redeem-item:hover {
+    background-color: #3b72e8; 
+    transform: scale(1.03); 
+  }
+  
+  .earning-title,
+  .redeem-title {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .earning-date {
+    color: #93a4c8;
+    font-size: 0.875rem;
+  }
+  
+  .earning-amount {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 16px;
+  }
+  
+  .cashout-button {
+    width: 100%;
+    max-width: 480px;
+    background-color: #3b72e8;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cashout-button:hover {
+    background-color: #242f47; 
+    transform: translateY(-3px); 
+  }
+  
+  .footer-bg {
+    height: 20px;
+    background-color: #111722;
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 768px) {
+    .design-root {
+      padding: 20px;
+    }
+  
+    .header {
+      padding: 20px 40px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .profile-section {
+      padding: 32px;
+      display: flex;
+      justify-content: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .profile-container {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .profile-info {
+      align-items: flex-start;
+      margin-left: 24px;
+    }
+  
+    .profile-name {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  
+    .profile-balance {
+      text-align: left;
+    }
+  
+    .invite-button {
+      visibility: hidden;
+      width: 100px;
+      margin-left: 24px;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+      padding: 32px 40px 16px;
+    }
+  
+    .earning-item,
+    .redeem-item {
+      padding: 16px 40px;
+    }
+  
+    .earning-title,
+    .redeem-title {
+      font-size: 1.125rem;
+    }
+  
+    .footer {
+      padding: 32px 40px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .cashout-button {
+      max-width: 400px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+  /* Base Styles */
+.login-root {
+    font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+    background-color: #0b0f162f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .login-container {
+    text-align: center;
+    background-color: #242f47;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-title {
+    color: white;
+    font-size: 1.875rem;
+    margin-bottom: 16px;
+  }
+  
+  .login-description {
+    color: #93a4c8;
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  
+  .login-button {
+    background-color: #3b72e8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #242f47;
+    transform: translateY(-3px);
+    border: 2px solid #3b72e8;
+  }
+  
