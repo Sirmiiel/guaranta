@@ -316,17 +316,17 @@ function Landing() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link to="/about" className="hover:text-white">About</Link></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
-                <li><a href="#" className="hover:text-white">Support</a></li>
+                <li><a href="/contact" className="hover:text-white">Contact</a></li>
+                <li><a href="/support" className="hover:text-white">Support</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white">Privacy</a></li>
-                <li><a href="#" className="hover:text-white">Terms</a></li>
-                <li><a href="#" className="hover:text-white">Security</a></li>
+                <li><a href="/privacy" className="hover:text-white">Privacy</a></li>
+                <li><a href="/terms" className="hover:text-white">Terms</a></li>
+                <li><a href="/security" className="hover:text-white">Security</a></li>
               </ul>
             </div>
           </div>

@@ -13,7 +13,7 @@ function MemberDashboard() {
   const [showFilters, setShowFilters] = useState(false);
 
   // Dummy transaction data
-  const dummyTransactions = [
+  const dummyTransactions = useMemo(() => [
     {
       id: 1,
       date: "2025-01-15",
@@ -70,15 +70,15 @@ function MemberDashboard() {
       description: "Extra savings",
       balance: -20000
     },
-    {
-      id: 8,
-      date: "2024-12-01",
-      type: "deposit",
-      amount: 50000,
-      description: "Monthly contribution",
-      balance: -45000
-    }
-  ];
+          {
+        id: 8,
+        date: "2024-12-01",
+        type: "deposit",
+        amount: 50000,
+        description: "Monthly contribution",
+        balance: -45000
+      }
+    ], []);
 
   // Calculate credit score based on transaction history
   const creditScore = useMemo(() => {
@@ -115,7 +115,7 @@ function MemberDashboard() {
     }
     
     return Math.min(100, Math.max(0, score));
-  }, []);
+  }, [dummyTransactions]);
 
   // Filter and sort transactions
   const filteredAndSortedTransactions = useMemo(() => {
@@ -168,7 +168,7 @@ function MemberDashboard() {
     });
 
     return filtered;
-  }, [filterType, filterDateFrom, filterDateTo, filterAmountMin, filterAmountMax, sortBy, sortOrder]);
+  }, [filterType, filterDateFrom, filterDateTo, filterAmountMin, filterAmountMax, sortBy, sortOrder, dummyTransactions]);
 
   // Dashboard stats
   const dashboardStats = useMemo(() => {
@@ -185,7 +185,7 @@ function MemberDashboard() {
         return transactionDate.getMonth() === now.getMonth() && transactionDate.getFullYear() === now.getFullYear();
       }).length
     };
-  }, []);
+  }, [dummyTransactions]);
 
   // Helper functions
   const clearFilters = () => {

@@ -25,62 +25,62 @@ function AdminDashboard() {
   });
 
   // Dummy members data
-  const dummyMembers = [
+  const dummyMembers = useMemo(() => [
     { id: 1, name: "Sarah Johnson", email: "sarah.j@email.com", joinDate: "2024-01-15", status: "active" },
     { id: 2, name: "Michael Chen", email: "m.chen@email.com", joinDate: "2024-02-20", status: "active" },
     { id: 3, name: "Aisha Patel", email: "aisha.p@email.com", joinDate: "2024-03-10", status: "active" },
     { id: 4, name: "David Okafor", email: "d.okafor@email.com", joinDate: "2024-01-25", status: "active" },
     { id: 5, name: "Emma Wilson", email: "emma.w@email.com", joinDate: "2024-04-05", status: "active" }
-  ];
+  ], []);
 
   // Dummy transactions data
-  const dummyTransactions = [
-    {
-      id: 1,
-      memberName: "Sarah Johnson",
-      date: "2025-01-15",
-      type: "deposit",
-      amount: 50000,
-      description: "Monthly contribution",
-      balance: 150000
-    },
-    {
-      id: 2,
-      memberName: "Michael Chen",
-      date: "2025-01-15",
-      type: "deposit",
-      amount: 75000,
-      description: "Monthly contribution",
-      balance: 225000
-    },
-    {
-      id: 3,
-      memberName: "Aisha Patel",
-      date: "2025-01-14",
-      type: "withdrawal",
-      amount: 30000,
-      description: "Emergency fund",
-      balance: 120000
-    },
-    {
-      id: 4,
-      memberName: "David Okafor",
-      date: "2025-01-14",
-      type: "deposit",
-      amount: 60000,
-      description: "Monthly contribution",
-      balance: 180000
-    },
-    {
-      id: 5,
-      memberName: "Emma Wilson",
-      date: "2025-01-13",
-      type: "deposit",
-      amount: 45000,
-      description: "Monthly contribution",
-      balance: 135000
-    }
-  ];
+  const dummyTransactions = useMemo(() => [
+          {
+        id: 1,
+        memberName: "Sarah Johnson",
+        date: "2025-01-15",
+        type: "deposit",
+        amount: 50000,
+        description: "Monthly contribution",
+        balance: 150000
+      },
+      {
+        id: 2,
+        memberName: "Michael Chen",
+        date: "2025-01-15",
+        type: "deposit",
+        amount: 75000,
+        description: "Monthly contribution",
+        balance: 225000
+      },
+      {
+        id: 3,
+        memberName: "Aisha Patel",
+        date: "2025-01-14",
+        type: "withdrawal",
+        amount: 30000,
+        description: "Emergency fund",
+        balance: 120000
+      },
+      {
+        id: 4,
+        memberName: "David Okafor",
+        date: "2025-01-14",
+        type: "deposit",
+        amount: 60000,
+        description: "Monthly contribution",
+        balance: 180000
+      },
+      {
+        id: 5,
+        memberName: "Emma Wilson",
+        date: "2025-01-13",
+        type: "deposit",
+        amount: 45000,
+        description: "Monthly contribution",
+        balance: 135000
+      }
+    ], []);
 
   // Dashboard stats
   const dashboardStats = useMemo(() => {
@@ -98,7 +98,7 @@ function AdminDashboard() {
       netBalance,
       memberCount: activeMembers.length
     };
-  }, []);
+  }, [dummyMembers, dummyTransactions]);
 
   // Filter and sort transactions
   const filteredAndSortedTransactions = useMemo(() => {
@@ -121,7 +121,7 @@ function AdminDashboard() {
     filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return filtered;
-  }, [filterMember, filterType, filterDateFrom, filterDateTo]);
+  }, [filterMember, filterType, filterDateFrom, filterDateTo, dummyTransactions]);
 
   // Helper functions
   const clearFilters = () => {
