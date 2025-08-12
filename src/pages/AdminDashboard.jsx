@@ -6,10 +6,10 @@ function AdminDashboard() {
   const [filterType, setFilterType] = useState("");
   const [filterDateFrom, setFilterDateFrom] = useState("");
   const [filterDateTo, setFilterDateTo] = useState("");
-  const [filterAmountMin, setFilterAmountMin] = useState("");
-  const [filterAmountMax, setFilterAmountMax] = useState("");
-  const [sortBy, setSortBy] = useState("date");
-  const [sortOrder, setSortOrder] = useState("desc");
+//   const [filterAmountMin, setFilterAmountMin] = useState("");
+//   const [filterAmountMax, setFilterAmountMax] = useState("");
+//   const [sortBy, setSortBy] = useState("date");
+//   const [sortOrder, setSortOrder] = useState("desc");
   const [showFilters, setShowFilters] = useState(false);
 
   // Active menu state
