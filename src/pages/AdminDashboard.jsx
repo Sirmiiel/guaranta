@@ -30,7 +30,40 @@ function AdminDashboard() {
     { id: 2, name: "Michael Chen", email: "m.chen@email.com", joinDate: "2024-02-20", status: "active" },
     { id: 3, name: "Aisha Patel", email: "aisha.p@email.com", joinDate: "2024-03-10", status: "active" },
     { id: 4, name: "David Okafor", email: "d.okafor@email.com", joinDate: "2024-01-25", status: "active" },
-    { id: 5, name: "Emma Wilson", email: "emma.w@email.com", joinDate: "2024-04-05", status: "active" }
+    { id: 5, name: "Emma Wilson", email: "emma.w@email.com", joinDate: "2024-04-05", status: "active" },
+    { id: 6, name: "John Doe", email: "john.doe@email.com", joinDate: "2024-05-15", status: "active" },
+    { id: 7, name: "Jane Smith", email: "jane.smith@email.com", joinDate: "2024-06-20", status: "active" },
+    { id: 8, name: "Robert Lee", email: "robert.lee@email.com", joinDate: "2024-07-10", status: "active" },
+    { id: 9, name: "Emily Davis", email: "emily.d@email.com", joinDate: "2024-08-25", status: "active" },
+    { id: 10, name: "William Brown", email: "william.b@email.com", joinDate: "2024-09-05", status: "active" },
+    { id: 11, name: "Olivia Martinez", email: "olivia.m@email.com", joinDate: "2024-10-15", status: "active" },
+    { id: 12, name: "James Rodriguez", email: "james.r@email.com", joinDate: "2024-11-20", status: "active" },
+    { id: 13, name: "Sophia Lee", email: "sophia.l@email.com", joinDate: "2024-12-10", status: "active" },
+    { id: 14, name: "Daniel Kim", email: "daniel.k@email.com", joinDate: "2025-01-25", status: "active" },
+    { id: 15, name: "Isabella Garcia", email: "isabella.g@email.com", joinDate: "2025-02-05", status: "active" },
+    { id: 16, name: "Lucas Martinez", email: "lucas.m@email.com", joinDate: "2025-03-15", status: "active" },
+    { id: 17, name: "Ava Rodriguez", email: "ava.r@email.com", joinDate: "2025-04-20", status: "active" },
+    { id: 18, name: "Ethan Davis", email: "ethan.d@email.com", joinDate: "2025-05-10", status: "active" },
+    { id: 19, name: "Mia Garcia", email: "mia.g@email.com", joinDate: "2025-06-25", status: "active" },
+    { id: 20, name: "Noah Brown", email: "noah.b@email.com", joinDate: "2025-07-05", status: "active" },
+    { id: 21, name: "Liam Martinez", email: "liam.m@email.com", joinDate: "2025-08-15", status: "active" },
+    { id: 22, name: "Ava Rodriguez", email: "ava.r@email.com", joinDate: "2025-09-20", status: "active" },
+    { id: 23, name: "Ethan Davis", email: "ethan.d@email.com", joinDate: "2025-10-10", status: "active" },
+    { id: 24, name: "Mia Garcia", email: "mia.g@email.com", joinDate: "2025-11-25", status: "active" },
+    { id: 25, name: "Noah Brown", email: "noah.b@email.com", joinDate: "2025-12-05", status: "active" },
+    { id: 26, name: "Liam Martinez", email: "liam.m@email.com", joinDate: "2025-08-15", status: "active" },
+    { id: 27, name: "Ava Rodriguez", email: "ava.r@email.com", joinDate: "2025-09-20", status: "active" },
+    { id: 28, name: "Ethan Davis", email: "ethan.d@email.com", joinDate: "2025-10-10", status: "active" },
+    { id: 29, name: "Mia Garcia", email: "mia.g@email.com", joinDate: "2025-11-25", status: "active" },
+    { id: 30, name: "Noah Brown", email: "noah.b@email.com", joinDate: "2025-12-05", status: "active" },
+    { id: 31, name: "Liam Martinez", email: "liam.m@email.com", joinDate: "2025-08-15", status: "active" },
+    { id: 32, name: "Ava Rodriguez", email: "ava.r@email.com", joinDate: "2025-09-20", status: "active" },
+    { id: 33, name: "Ethan Davis", email: "ethan.d@email.com", joinDate: "2025-10-10", status: "active" },
+    { id: 34, name: "Mia Garcia", email: "mia.g@email.com", joinDate: "2025-11-25", status: "active" },
+    { id: 35, name: "Noah Brown", email: "noah.b@email.com", joinDate: "2025-12-05", status: "active" },
+    { id: 36, name: "Liam Martinez", email: "liam.m@email.com", joinDate: "2025-08-15", status: "active" },
+    { id: 37, name: "Ava Rodriguez", email: "ava.r@email.com", joinDate: "2025-09-20", status: "active" },
+
   ], []);
 
   // Dummy transactions data
@@ -40,46 +73,118 @@ function AdminDashboard() {
         memberName: "Sarah Johnson",
         date: "2025-01-15",
         type: "deposit",
-        amount: 50000,
+        amount: 500000,
         description: "Monthly contribution",
-        balance: 150000
+        balance: 1500000
       },
       {
         id: 2,
         memberName: "Michael Chen",
         date: "2025-01-15",
         type: "deposit",
-        amount: 75000,
+        amount: 750000,
         description: "Monthly contribution",
-        balance: 225000
+        balance: 2250000
       },
       {
         id: 3,
         memberName: "Aisha Patel",
         date: "2025-01-14",
         type: "withdrawal",
-        amount: 30000,
+        amount: 300000,
         description: "Emergency fund",
-        balance: 120000
+        balance: 1200000
       },
       {
         id: 4,
         memberName: "David Okafor",
         date: "2025-01-14",
         type: "deposit",
-        amount: 60000,
+        amount: 600000,
         description: "Monthly contribution",
-        balance: 180000
+        balance: 1800000
       },
       {
         id: 5,
         memberName: "Emma Wilson",
         date: "2025-01-13",
         type: "deposit",
-        amount: 45000,
+        amount: 450000,
         description: "Monthly contribution",
-        balance: 135000
-      }
+        balance: 1350000
+      },
+      {
+        id: 6,
+        memberName: "John Doe",
+        date: "2025-01-12",
+        type: "withdrawal",
+        amount: 200000,
+        description: "Emergency fund",
+        balance: 1150000
+      },
+      {
+        id: 7,
+        memberName: "Jane Smith",
+        date: "2025-01-11",
+        type: "deposit",
+        amount: 350000,
+        description: "Monthly contribution",
+        balance: 1500000
+      },
+      {
+        id: 8,
+        memberName: "Robert Lee",
+        date: "2025-01-10",
+        type: "withdrawal",
+        amount: 150000,
+        description: "Emergency fund",
+        balance: 1350000
+      },
+      {
+        id: 9,
+        memberName: "Emily Davis",
+        date: "2025-01-09",
+        type: "deposit",
+        amount: 250000,
+        description: "Monthly contribution",
+        balance: 1600000
+      },
+      {
+        id: 10,
+        memberName: "William Brown",
+        date: "2025-01-08",
+        type: "withdrawal",
+        amount: 100000,
+        description: "Emergency fund",
+        balance: 1500000
+      },
+      {
+        id: 11,
+        memberName: "Olivia Martinez",
+        date: "2025-01-07",
+        type: "deposit",
+        amount: 150000,
+        description: "Monthly contribution",
+        balance: 1650000
+      },
+      {
+        id: 12,
+        memberName: "James Rodriguez",
+        date: "2025-01-06",
+        type: "withdrawal",
+        amount: 100000,
+        description: "Emergency fund",
+        balance: 1550000
+      },    
+      {
+        id: 13,
+        memberName: "Sophia Lee",
+        date: "2025-01-05",
+        type: "deposit",
+        amount: 150000,
+        description: "Monthly contribution",
+        balance: 1700000
+      },
     ], []);
 
   // Dashboard stats
@@ -368,7 +473,7 @@ function AdminDashboard() {
 
       case "members":
         return (
-          <div className="bg-white rounded-xl shadow">
+          <div className="bg-white rounded-xl w-[100vw] shadow space-y-6">
             <div className="p-6 border-b border-gray-200">
               <h2 className="text-xl font-semibold text-gray-900">Members Management</h2>
               <p className="text-gray-600 mt-1">Manage cooperative members and their accounts</p>
@@ -392,7 +497,7 @@ function AdminDashboard() {
 
       case "reports":
         return (
-          <div className="bg-white rounded-xl shadow">
+          <div className="bg-white rounded-xl shadow w-[100vw]">
             <div className="p-6 border-b border-gray-200">
               <h2 className="text-xl font-semibold text-gray-900">Reports & Analytics</h2>
               <p className="text-gray-600 mt-1">Generate financial reports and view analytics</p>
@@ -421,7 +526,7 @@ function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="flex">
+      <div className="flex w-auto">
         {/* Sidebar */}
         <div className="w-64 bg-white shadow-lg min-h-screen">
           <div className="p-6 border-b border-gray-200">

@@ -4,22 +4,29 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function MemberProfile() {
   // Mock user data - in a real app this would come from props or context
-  const [user] = useState({
-    name: "Miss. Baraka",
-    email: "baraka@example.com",
-    phone: "+234 801 234 5678",
-    memberId: "MEM-001",
-    joinDate: "2024-01-15",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-  });
+  // Add these fields to your user state
+    const [user] = useState({
+      name: "Miss. Baraka",
+      email: "baraka@example.com",
+      phone: "+234 801 234 5678",
+      memberId: "MEM-001",
+      joinDate: "2024-01-15",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      gender: "Female",
+      dob: "1995-07-20",
+      occupation: "Accountant",
+      address: "23 Harmony Street, Lagos, Nigeria",
+      nationality: "Nigerian",
+    });
+
 
   const [transactions] = useState([
-    { id: 1, date: "2025-01-15", type: "deposit", amount: 5000, description: "Monthly contribution" },
-    { id: 2, date: "2025-01-10", type: "deposit", amount: 3000, description: "Additional savings" },
-    { id: 3, date: "2025-01-05", type: "withdrawal", amount: 2000, description: "Emergency fund" },
-    { id: 4, date: "2024-12-20", type: "deposit", amount: 4000, description: "Monthly contribution" },
-    { id: 5, date: "2024-12-15", type: "deposit", amount: 2500, description: "Additional savings" },
-    { id: 6, date: "2024-12-10", type: "withdrawal", amount: 1500, description: "Personal expense" },
+    { id: 1, date: "2025-01-15", type: "deposit", amount: 57700, description: "Monthly contribution" },
+    { id: 2, date: "2025-01-10", type: "deposit", amount: 55500, description: "Additional savings" },
+    { id: 3, date: "2025-01-05", type: "withdrawal", amount: 30000, description: "Emergency fund" },
+    { id: 4, date: "2024-12-20", type: "deposit", amount: 56800, description: "Monthly contribution" },
+    { id: 5, date: "2024-12-15", type: "deposit", amount: 55000, description: "Additional savings" },
+    { id: 6, date: "2024-12-10", type: "withdrawal", amount: 35000, description: "Personal expense" },
   ]);
 
   const [creditScoreHistory] = useState([
@@ -216,7 +223,7 @@ function MemberProfile() {
         </div>
 
         {/* Recent Transactions */}
-        <div className="mt-8 bg-white rounded-2xl shadow overflow-hidden">
+        {/* <div className="mt-8 bg-white rounded-2xl shadow overflow-hidden">
           <div className="px-6 py-4 border-b">
             <h3 className="text-lg font-semibold">Recent Transactions</h3>
           </div>
@@ -260,7 +267,76 @@ function MemberProfile() {
               View all transactions →
             </Link>
           </div>
-        </div>
+        </div> */}
+
+
+       {/* Bio Data Section */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 mt-6">
+            <h3 className="text-xl font-semibold mb-5 border-b pb-2 text-gray-800">Bio Data</h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-500">Full Name</p>
+                  <p className="text-gray-900 font-medium">{user.name}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-500">Phone</p>
+                  <p className="text-gray-900 font-medium">{user.phone}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-500">Date of Birth</p>
+                  <p className="text-gray-900 font-medium">{new Date(user.dob).toLocaleDateString()}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-500">Occupation</p>
+                  <p className="text-gray-900 font-medium">{user.occupation}</p>
+                </div>
+              </div>
+
+              <div className="sm:col-span-2 flex items-start gap-3">
+                <svg className="w-5 h-5 text-indigo-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11H9v4h2V7zm0 6H9v2h2v-2z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-500">Address</p>
+                  <p className="text-gray-900 font-medium">{user.address}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 7a1 1 0 112 0 1 1 0 01-2 0zm0 3a1 1 0 012 0v3a1 1 0 11-2 0V10z" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-500">Nationality</p>
+                  <p className="text-gray-900 font-medium">{user.nationality}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
   );

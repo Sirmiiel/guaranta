@@ -255,9 +255,106 @@ function Landing() {
                 </div>
               </div>
             </div>
+
+            {/* For Financial Institutions */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-purple-100 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3L2 9v2a1 1 0 001 1h1v7a2 2 0 002 2h10a2 2 0 002-2v-7h1a1 1 0 001-1V9l-10-6zm0 2.18L19.5 9H4.5L12 5.18zM17 19H7v-7h10v7z" />
+                    <rect x="9" y="12" width="2" height="5" rx="1" />
+                    <rect x="13" y="12" width="2" height="5" rx="1" />
+                  </svg>
+                </div>
+                  <h3 className="text-2xl font-bold text-gray-900">For Financial Institutions</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Reliable Credit Data</h4>
+                    <p className="text-gray-600 text-sm">Gain access to verified transaction histories from trusted cooperative partners.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Expanded Customer Base</h4>
+                    <p className="text-gray-600 text-sm">Connect with underserved communities through established co-ops that already have trust and engagement.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Risk Reduction</h4>
+                    <p className="text-gray-600 text-sm">Use accurate, real-time cooperative transaction data to assess borrower reliability and minimize default risk.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <section class="bg-white py-16 px-6 lg:px-20">
+          <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Learn & Understand</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              Empowering everyone with the knowledge to make smarter financial moves.
+            </p>
+          </div>
+
+          <div class="grid gap-10 md:grid-cols-3">
+            {/* Credit Scoring */}
+            <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">What is Credit Scoring?</h3>
+              <p class="text-gray-600 mb-3">
+                Credit scoring measures how likely you are to repay loans based on your past financial behavior.
+              </p>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Consistent deposits improve your score.</li>
+                <li>Higher scores mean easier loan access.</li>
+                <li>Better rates and increased trust.</li>
+              </ul>
+            </div>
+
+            {/* Why Co-ops */}
+            <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Why Cooperative Societies Are a Good Bet</h3>
+              <p class="text-gray-600 mb-3">
+                Co-ops are community-driven savings and lending groups that work for everyone.
+              </p>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Members pool funds for security.</li>
+                <li>Lower entry barriers than banks.</li>
+                <li>Built on community trust and support.</li>
+              </ul>
+            </div>
+
+            {/* Financial Institutions */}
+            <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">How Financial Institutions Can Lend to Co-ops</h3>
+              <p class="text-gray-600 mb-3">
+                With accurate digital records, lenders can confidently support co-ops.
+              </p>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Access to transaction history & savings patterns.</li>
+                <li>Loans based on real data, not just collateral.</li>
+                <li>Tailored products for co-op members.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
 
       {/* Call to Action Section */}
       <section className="py-20 px-4 bg-blue-600">

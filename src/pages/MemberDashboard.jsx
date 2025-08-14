@@ -18,17 +18,17 @@ function MemberDashboard() {
       id: 1,
       date: "2025-01-15",
       type: "deposit",
-      amount: 50000,
+      amount: 56000,
       description: "Monthly contribution",
-      balance: 150000
+      balance: 160000
     },
     {
-      id: 2,
+      id: 2,  
       date: "2025-01-10",
       type: "withdrawal",
-      amount: 25000,
+      amount: 35000,
       description: "Emergency fund",
-      balance: 100000
+      balance: 120000
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ function MemberDashboard() {
       type: "deposit",
       amount: 75000,
       description: "Bonus contribution",
-      balance: 125000
+      balance: 14500
     },
     {
       id: 4,
@@ -82,7 +82,7 @@ function MemberDashboard() {
 
   // Calculate credit score based on transaction history
   const creditScore = useMemo(() => {
-    let score = 50; // Base score
+    let score = 55; // Base score
     
     // Check for no missed deposits in last 3 months
     const threeMonthsAgo = new Date();
@@ -96,13 +96,13 @@ function MemberDashboard() {
     
     // Bonus for regular deposits
     if (monthlyDeposits.length >= 6) {
-      score += 5; // Consistent monthly deposits
+      score += 10; // Consistent monthly deposits
     }
     
     // Bonus for positive balance
     const currentBalance = dummyTransactions[0]?.balance || 0;
     if (currentBalance > 0) {
-      score += 5; // Positive balance
+      score += 10; // Positive balance
     }
     
     // Bonus for larger deposits
@@ -111,7 +111,7 @@ function MemberDashboard() {
       .reduce((sum, t) => sum + t.amount, 0) / dummyTransactions.filter(t => t.type === 'deposit').length;
     
     if (avgDeposit > 40000) {
-      score += 5; // Above average deposits
+      score += 10; // Above average deposits
     }
     
     return Math.min(100, Math.max(0, score));
